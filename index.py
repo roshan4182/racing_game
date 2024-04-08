@@ -6,7 +6,7 @@ import time
 from pygame.locals import *
 
 
-pygame.mixer.init()
+pygame.mixer.init(driver='coreaudio')
 
 # Global constants
 WINDOWWIDTH = 800
