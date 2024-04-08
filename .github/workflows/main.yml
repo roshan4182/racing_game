@@ -22,7 +22,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y libasound2-dev
 
     - name: Set SDL_AUDIODRIVER environment variable
-      run: sudo sh -c 'echo "export SDL_AUDIODRIVER=dummy" >> $GITHUB_ENV'
+      run: echo "export SDL_AUDIODRIVER=dummy" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
