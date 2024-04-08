@@ -6,7 +6,7 @@ import time
 from pygame.locals import *
 
 
-pygame.mixer.init(driver='alsa')
+pygame.mixer.init()
 
 # Global constants
 WINDOWWIDTH = 800
