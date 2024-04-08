@@ -21,6 +21,9 @@ jobs:
     - name: Install ALSA development files
       run: sudo apt-get update && sudo apt-get install -y libasound2-dev
 
+    - name: Set SDL_AUDIODRIVER environment variable
+      run: export SDL_AUDIODRIVER=dummy
+
     - name: Install dependencies
       run: |
         pip install pygame
