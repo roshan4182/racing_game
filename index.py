@@ -5,7 +5,7 @@ import os
 import time
 from pygame.locals import *
 
-os.environ['SDL_AUDIODRIVER'] = 'coreaudio'
+os.environ['SDL_AUDIODRIVER'] = 'darwin'
 pygame.mixer.init()
 
 # Global constants
