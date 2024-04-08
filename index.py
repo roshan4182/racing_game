@@ -5,8 +5,8 @@ import os
 import time
 from pygame.locals import *
 
-os.environ['SDL_AUDIODRIVER'] = 'pusleaudio'
-pygame.mixer.init()
+
+pygame.mixer.init(driver='coreaudio')
 
 # Global constants
 WINDOWWIDTH = 800
