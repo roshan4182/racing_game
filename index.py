@@ -6,9 +6,20 @@ import time
 from pygame.locals import *
 
 
-pygame.mixer.init(driver='coreaudio')
+os.environ['SDL_AUDIODRIVER'] = 'coreaudio'
 
-# Global constants
+
+pygame.init()
+
+
+pygame.mixer.init()
+
+
+
+
+
+
+
 WINDOWWIDTH = 800
 WINDOWHEIGHT = 600
 TEXTCOLOR = (255, 255, 255)
@@ -75,7 +86,7 @@ def main():
     pygame.display.update()
     waitForPlayerToPressKey()
 
-    # Initialize count variable with a value
+  
     global count
     count = 3
 
@@ -84,7 +95,7 @@ def main():
         with open(SAVE_FILE_PATH, 'w') as f:
             f.write(str(0))
 
-    # Read the top score from the save file
+    
     with open(SAVE_FILE_PATH, 'r') as v:
         topScore = int(v.readline())
 
