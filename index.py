@@ -5,6 +5,9 @@ import os
 import time
 from pygame.locals import *
 
+os.environ['SDL_AUDIODRIVER'] = 'alsa'
+pygame.mixer.init()
+
 # Global constants
 WINDOWWIDTH = 800
 WINDOWHEIGHT = 600
@@ -18,7 +21,7 @@ BADDIEMAXSPEED = 8
 ADDNEWBADDIERATE = 6
 PLAYERMOVERATE = 5
 
-pygame.mixer.init()
+
 hitSound = pygame.mixer.Sound('/Users/roshan1610/Downloads/Road Rush Game using Pygame/sound/zapsplat_impacts_car_crash_smash_head_on_23549.mp3')
 runningSound = pygame.mixer.Sound('/Users/roshan1610/Downloads/Road Rush Game using Pygame/sound/car-race-car-citroen-race-screeching-tires-76578.mp3')
 
