@@ -5,7 +5,7 @@ import os
 import time
 from pygame.locals import *
 
-os.environ['SDL_AUDIODRIVER'] = 'oss'
+os.environ['SDL_AUDIODRIVER'] = 'pusleaudio'
 pygame.mixer.init()
 
 # Global constants
