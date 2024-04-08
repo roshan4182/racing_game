@@ -6,7 +6,7 @@ import time
 from pygame.locals import *
 
 
-os.environ['SDL_AUDIODRIVER'] = 'coreaudio'
+
 
 
 pygame.init()
