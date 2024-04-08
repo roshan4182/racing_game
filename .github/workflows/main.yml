@@ -18,8 +18,12 @@ jobs:
       with:
         python-version: 3.10.13
 
+    - name: Install ALSA development files
+      run: sudo apt-get update && sudo apt-get install -y libasound2-dev
+
     - name: Install dependencies
-      run: pip install pygame
+      run: |
+        pip install pygame
 
     - name: Run tests
       run: |
