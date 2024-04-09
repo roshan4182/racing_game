@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y python3-dev python3-numpy libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libporttime0 libportmidi0
+        sudo apt-get install -y python3-dev python3-numpy libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libporttime-dev
         pip install -r requirements.txt
         pip install .
     - name: Set SDL_AUDIODRIVER environment variable
