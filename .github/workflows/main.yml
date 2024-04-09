@@ -1,4 +1,4 @@
-name: CI
+name: run_tests
 
 on:
   push:
@@ -27,7 +27,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pygame
+        pip install -r requirements.txt
+        pip install .
 
     - name: Run tests
       run: |
         python -m unittest test_game.py
+        pytest
