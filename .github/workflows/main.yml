@@ -15,6 +15,10 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.11
+    - name: Install ALSA and SDL2 development files
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libasound2-dev libsdl2-dev
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
